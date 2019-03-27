@@ -1,0 +1,13 @@
+import cv2
+cv2.__version__
+import sys
+from matplotlib import pyplot as plt
+if __name__ =="__main__":
+    if len(sys.argv)>1:
+        image = cv2.imread('picture/Npc_zoom_3040179000_02.jpg',cv2.IMREAD_ANYCOLOR)
+        image = cv2.cvtColor(image,cv2.COLOR_BGR2RGB)
+    else:
+        print("Usge:python firstOpenCV3.py imageFile")
+plt.imshow(image)
+plt.show()
+image.shape
